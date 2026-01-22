@@ -33,7 +33,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/my-exports",
-        element: <MyExports></MyExports>,
+        element: (
+          <PrivateRoute>
+            <MyExports></MyExports>,
+          </PrivateRoute>
+        ),
       },
       {
         path: "/my-imports",

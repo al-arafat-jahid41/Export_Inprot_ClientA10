@@ -26,17 +26,17 @@ const Register = () => {
 
     if (!/[A-Z]/.test(password)) {
       return setPasswordError(
-        "Password must contain at least one uppercase letter"
+        "Password must contain at least one uppercase letter",
       );
     }
     if (!/[a-z]/.test(password)) {
       return setPasswordError(
-        "Password must contain at least one lowercase letter"
+        "Password must contain at least one lowercase letter",
       );
     }
     if (!/[!@#$&*]/.test(password)) {
       return setPasswordError(
-        "Password must contain at least one special character"
+        "Password must contain at least one special character",
       );
     }
 
@@ -64,8 +64,8 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 dark:bg-gray-900">
+      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8 dark:bg-gray-800">
         {/* Title */}
         <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Create an Account

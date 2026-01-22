@@ -34,37 +34,41 @@ const Login = () => {
       });
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
-      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8">
+    <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4 dark:bg-gray-900">
+      <div className="w-full max-w-md bg-white rounded-xl shadow-lg p-8 dark:bg-gray-800">
         {/* Title */}
         <h2 className="text-3xl font-bold text-center text-blue-600 mb-6">
           Login to ImportExportHub
         </h2>
 
         {/* Form */}
-        <form onSubmit={handleLogin} className="space-y-4">
+        <form onSubmit={handleLogin} className="space-y-4 ">
           <div>
-            <label className="block text-sm font-medium mb-1">Email</label>
+            <label className="block text-sm font-medium mb-1 dark:text-blue-700">
+              Email
+            </label>
             <input
               type="email"
               name="email"
               placeholder="Enter your email"
-              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-blue-900"
             />
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-1">Password</label>
+            <label className="block text-sm font-medium mb-1 dark:text-blue-700">
+              Password
+            </label>
             <input
               type="password"
               name="password"
               placeholder="Enter your password"
-              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full border rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:border-blue-900"
             />
           </div>
 
           <div className="text-right">
-            <button className="text-sm text-blue-600 hover:underline">
+            <button className="text-sm text-blue-600 hover:underline dark:border-blue-700">
               Forgot Password?
             </button>
           </div>
@@ -87,18 +91,20 @@ const Login = () => {
         {/* Google Login */}
         <button
           onClick={handleGoogleLogin}
-          className="w-full flex items-center justify-center gap-3 border py-2 rounded-lg hover:bg-gray-50 transition"
+          className="w-full flex items-center justify-center gap-3 border py-2 rounded-lg hover:bg-gray-50 transition dark:border-blue-900"
         >
           <img
             src="https://www.svgrepo.com/show/475656/google-color.svg"
             alt="Google"
             className="w-5 h-5"
           />
-          <span className="font-medium">Continue with Google</span>
+          <span className="font-medium dark:text-blue-700">
+            Continue with Google
+          </span>
         </button>
 
         {/* Register Link */}
-        <p className="text-center text-sm mt-6">
+        <p className="text-center text-sm mt-6 dark:text-blue-700">
           Don’t have an account?{" "}
           <Link
             to="/register"
